@@ -36,7 +36,7 @@ Es el cuartyo y último proyecto del programa One G8 de Oracle Next Education en
 ## 🧑‍💻 Autor
 
 **Lic. Guillermo Dardón**  
-Abogado con experiencia en dercho migratorio, comercial internacional, cobranza judicial y extrajudicial.  
+Abogado con experiencia en dercho migratorio, derecho comercial internacional, derecho aduanero, derecho mercantil, cobranza judicial, extrajudicial y negociación.  
 Entusiasta de la programación y la IA aplicada al derecho mexicano  
 GitHub: [@Attorneyguillermodardon](https://github.com/Attorneyguillermodardon)  
 
