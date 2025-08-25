@@ -11,4 +11,6 @@ public interface TopicoRepository extends JpaRepository<Topico, Long>{
 
     Page<Topico> findByCursoAndFechaBetween(String curso, LocalDateTime inicio, LocalDateTime fin, Pageable paginacion);
 
+    Boolean existsByTitulo(String titulo);
+
 }

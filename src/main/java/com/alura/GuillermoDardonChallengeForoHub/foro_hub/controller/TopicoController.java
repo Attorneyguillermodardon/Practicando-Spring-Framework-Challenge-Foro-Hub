@@ -1,5 +1,6 @@
 package com.alura.GuillermoDardonChallengeForoHub.foro_hub.controller;
 
+import com.alura.GuillermoDardonChallengeForoHub.foro_hub.Validations.ValidadorTituloDuplicado;
 import com.alura.GuillermoDardonChallengeForoHub.foro_hub.domain.topico.*;
 import com.alura.GuillermoDardonChallengeForoHub.foro_hub.repository.TopicoRepository;
 
@@ -24,11 +25,15 @@ public class TopicoController {
     @Autowired
     private TopicoRepository repository;
 
+    @Autowired
+    ValidadorTituloDuplicado validadorTituloDuplicado;
+
     @Transactional
     @PostMapping
 
     public ResponseEntity registrar(@RequestBody @Valid DatosRegistroTopico datos, UriComponentsBuilder uriComponentsBuilder) {
         var topico = new Topico(datos);
+        validadorTituloDuplicado.validar(topico.getTitulo());
         repository.save(topico);
 
         var uri = uriComponentsBuilder.path("/topicos/{id}").buildAndExpand(topico.getId()).toUri();
